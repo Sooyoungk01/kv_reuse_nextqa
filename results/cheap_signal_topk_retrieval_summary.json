@@ -1,0 +1,652 @@
+{
+  "num_transitions": 74,
+  "oracle_semantic_drift_source_key": "token_importance_scores",
+  "top_percent_budgets": [
+    5.0,
+    10.0
+  ],
+  "signal_keys": [
+    "text_token_decoder_hidden_delta_scores",
+    "text_to_image_attention_cosine_distance_scores",
+    "projector_output_delta_scores",
+    "topk_image_attention_overlap_k10_scores",
+    "cross_modal_gated_scores",
+    "early_mid_decoder_block_hidden_delta_scores",
+    "last_text_token_hidden_delta_scores",
+    "high_attention_weighted_image_token_delta_scores",
+    "hidden_state_mean_layer_l2_scores",
+    "attention_cosine_distance_scores"
+  ],
+  "per_percent": {
+    "5%": {
+      "oracle_top_percent": 5.0,
+      "random_baseline_recall": 0.05,
+      "num_transitions": 74,
+      "oracle_semantic_drift_source_key": "token_importance_scores",
+      "k_stats": {
+        "min": 10.0,
+        "max": 10.0,
+        "mean": 10.0,
+        "median": 10.0,
+        "std": 0.0,
+        "p10": 10.0,
+        "p90": 10.0
+      },
+      "signals": {
+        "text_token_decoder_hidden_delta_scores": {
+          "label": "Text Hidden Delta",
+          "mean_recall_at_percent": 0.07162162162162163,
+          "median_recall_at_percent": 0.0,
+          "std_recall_at_percent": 0.08932217767384186,
+          "pooled_recall_at_percent": 0.07162162162162163,
+          "mean_lift_vs_random": 1.4324324324324325,
+          "mean_jaccard": 0.03950738664360955,
+          "mean_overlap_count": 0.7162162162162162,
+          "hit_any_rate": 0.47297297297297297,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.3350599335172151,
+            "mean": 0.06777227893549724,
+            "median": 0.0,
+            "std": 0.09047501607833845,
+            "p10": 0.0,
+            "p90": 0.19011724620608828
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.4,
+            "mean": 0.07162162162162163,
+            "median": 0.0,
+            "std": 0.08932217767384186,
+            "p10": 0.0,
+            "p90": 0.2
+          }
+        },
+        "text_to_image_attention_cosine_distance_scores": {
+          "label": "Text->Image Attn Cos",
+          "mean_recall_at_percent": 0.03513513513513514,
+          "median_recall_at_percent": 0.0,
+          "std_recall_at_percent": 0.057966515106830326,
+          "pooled_recall_at_percent": 0.03513513513513514,
+          "mean_lift_vs_random": 0.7027027027027027,
+          "mean_jaccard": 0.0188082819661767,
+          "mean_overlap_count": 0.35135135135135137,
+          "hit_any_rate": 0.2972972972972973,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.28195190953817023,
+            "mean": 0.03183432817727584,
+            "median": 0.0,
+            "std": 0.05899880673653842,
+            "p10": 0.0,
+            "p90": 0.1111897378907033
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.2,
+            "mean": 0.035135135135135144,
+            "median": 0.0,
+            "std": 0.057966515106830326,
+            "p10": 0.0,
+            "p90": 0.1
+          }
+        },
+        "projector_output_delta_scores": {
+          "label": "Projector Delta",
+          "mean_recall_at_percent": 0.14864864864864866,
+          "median_recall_at_percent": 0.1,
+          "std_recall_at_percent": 0.13580913001514716,
+          "pooled_recall_at_percent": 0.14864864864864866,
+          "mean_lift_vs_random": 2.972972972972973,
+          "mean_jaccard": 0.08659782073094767,
+          "mean_overlap_count": 1.4864864864864864,
+          "hit_any_rate": 0.7297297297297297,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.7729191078730708,
+            "mean": 0.17398025344282675,
+            "median": 0.12588870012746534,
+            "std": 0.1859903788240186,
+            "p10": 0.0,
+            "p90": 0.4520830990082413
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.5,
+            "mean": 0.14864864864864868,
+            "median": 0.1,
+            "std": 0.13580913001514716,
+            "p10": 0.0,
+            "p90": 0.3700000000000003
+          }
+        },
+        "topk_image_attention_overlap_k10_scores": {
+          "label": "Top-k Overlap K10",
+          "mean_recall_at_percent": 0.07567567567567568,
+          "median_recall_at_percent": 0.1,
+          "std_recall_at_percent": 0.08022065989003152,
+          "pooled_recall_at_percent": 0.07567567567567568,
+          "mean_lift_vs_random": 1.5135135135135136,
+          "mean_jaccard": 0.04123202149517939,
+          "mean_overlap_count": 0.7567567567567568,
+          "hit_any_rate": 0.5675675675675675,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.64540642899083,
+            "mean": 0.07319730735574156,
+            "median": 0.05539410882644715,
+            "std": 0.09837310697023292,
+            "p10": 0.0,
+            "p90": 0.1602567207112833
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.4,
+            "mean": 0.07567567567567568,
+            "median": 0.1,
+            "std": 0.08022065989003152,
+            "p10": 0.0,
+            "p90": 0.2
+          }
+        },
+        "cross_modal_gated_scores": {
+          "label": "Cross-modal Gate",
+          "mean_recall_at_percent": 0.09054054054054055,
+          "median_recall_at_percent": 0.1,
+          "std_recall_at_percent": 0.09324324324324325,
+          "pooled_recall_at_percent": 0.09054054054054055,
+          "mean_lift_vs_random": 1.8108108108108107,
+          "mean_jaccard": 0.050014410695525244,
+          "mean_overlap_count": 0.9054054054054054,
+          "hit_any_rate": 0.581081081081081,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.46359459697951266,
+            "mean": 0.09186536254444513,
+            "median": 0.056096354779036496,
+            "std": 0.10912465313091906,
+            "p10": 0.0,
+            "p90": 0.2443075459534215
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.3,
+            "mean": 0.09054054054054055,
+            "median": 0.1,
+            "std": 0.09324324324324325,
+            "p10": 0.0,
+            "p90": 0.2
+          }
+        },
+        "early_mid_decoder_block_hidden_delta_scores": {
+          "label": "Mid Block L2",
+          "mean_recall_at_percent": 0.12702702702702703,
+          "median_recall_at_percent": 0.1,
+          "std_recall_at_percent": 0.11425114263701758,
+          "pooled_recall_at_percent": 0.12702702702702703,
+          "mean_lift_vs_random": 2.5405405405405403,
+          "mean_jaccard": 0.07193493803400924,
+          "mean_overlap_count": 1.2702702702702702,
+          "hit_any_rate": 0.6621621621621622,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.5037806302123492,
+            "mean": 0.15131521676947068,
+            "median": 0.11485124577399808,
+            "std": 0.15007685758777514,
+            "p10": 0.0,
+            "p90": 0.394758546353265
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.4,
+            "mean": 0.12702702702702706,
+            "median": 0.1,
+            "std": 0.11425114263701758,
+            "p10": 0.0,
+            "p90": 0.3
+          }
+        },
+        "last_text_token_hidden_delta_scores": {
+          "label": "Last Text Delta",
+          "mean_recall_at_percent": 0.06621621621621622,
+          "median_recall_at_percent": 0.0,
+          "std_recall_at_percent": 0.08586133860337877,
+          "pooled_recall_at_percent": 0.06621621621621622,
+          "mean_lift_vs_random": 1.3243243243243243,
+          "mean_jaccard": 0.03639397911843732,
+          "mean_overlap_count": 0.6621621621621622,
+          "hit_any_rate": 0.44594594594594594,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.296580685758397,
+            "mean": 0.06367137804941048,
+            "median": 0.0,
+            "std": 0.08712030323047228,
+            "p10": 0.0,
+            "p90": 0.21129442156909817
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.3,
+            "mean": 0.06621621621621622,
+            "median": 0.0,
+            "std": 0.08586133860337877,
+            "p10": 0.0,
+            "p90": 0.2
+          }
+        },
+        "high_attention_weighted_image_token_delta_scores": {
+          "label": "Attn-weighted Img Delta",
+          "mean_recall_at_percent": 0.14864864864864866,
+          "median_recall_at_percent": 0.1,
+          "std_recall_at_percent": 0.11768400571393103,
+          "pooled_recall_at_percent": 0.14864864864864866,
+          "mean_lift_vs_random": 2.972972972972973,
+          "mean_jaccard": 0.08478718656737233,
+          "mean_overlap_count": 1.4864864864864864,
+          "hit_any_rate": 0.7567567567567568,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.6093495706327291,
+            "mean": 0.18656478774501992,
+            "median": 0.15619323550773911,
+            "std": 0.16496602629831678,
+            "p10": 0.0,
+            "p90": 0.43561345455302336
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.4,
+            "mean": 0.14864864864864866,
+            "median": 0.1,
+            "std": 0.11768400571393103,
+            "p10": 0.0,
+            "p90": 0.3
+          }
+        },
+        "hidden_state_mean_layer_l2_scores": {
+          "label": "Mean L2",
+          "mean_recall_at_percent": 0.13783783783783785,
+          "median_recall_at_percent": 0.1,
+          "std_recall_at_percent": 0.12488124380700456,
+          "pooled_recall_at_percent": 0.13783783783783785,
+          "mean_lift_vs_random": 2.7567567567567566,
+          "mean_jaccard": 0.07911006982214412,
+          "mean_overlap_count": 1.3783783783783783,
+          "hit_any_rate": 0.6621621621621622,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.6181873896485721,
+            "mean": 0.16272778608139954,
+            "median": 0.14352502307577408,
+            "std": 0.16413471988785358,
+            "p10": 0.0,
+            "p90": 0.37025257286849433
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.5,
+            "mean": 0.13783783783783785,
+            "median": 0.1,
+            "std": 0.12488124380700456,
+            "p10": 0.0,
+            "p90": 0.3
+          }
+        },
+        "attention_cosine_distance_scores": {
+          "label": "Attn Cos",
+          "mean_recall_at_percent": 0.08783783783783784,
+          "median_recall_at_percent": 0.0,
+          "std_recall_at_percent": 0.11502373750630629,
+          "pooled_recall_at_percent": 0.08783783783783784,
+          "mean_lift_vs_random": 1.7567567567567568,
+          "mean_jaccard": 0.05008762632601642,
+          "mean_overlap_count": 0.8783783783783784,
+          "hit_any_rate": 0.47297297297297297,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.596004624346313,
+            "mean": 0.09543140723785241,
+            "median": 0.0,
+            "std": 0.13607712015100182,
+            "p10": 0.0,
+            "p90": 0.30809990114465047
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.5,
+            "mean": 0.08783783783783784,
+            "median": 0.0,
+            "std": 0.11502373750630629,
+            "p10": 0.0,
+            "p90": 0.2700000000000003
+          }
+        }
+      }
+    },
+    "10%": {
+      "oracle_top_percent": 10.0,
+      "random_baseline_recall": 0.1,
+      "num_transitions": 74,
+      "oracle_semantic_drift_source_key": "token_importance_scores",
+      "k_stats": {
+        "min": 20.0,
+        "max": 20.0,
+        "mean": 20.0,
+        "median": 20.0,
+        "std": 0.0,
+        "p10": 20.0,
+        "p90": 20.0
+      },
+      "signals": {
+        "text_token_decoder_hidden_delta_scores": {
+          "label": "Text Hidden Delta",
+          "mean_recall_at_percent": 0.1554054054054054,
+          "median_recall_at_percent": 0.15,
+          "std_recall_at_percent": 0.08988264404495075,
+          "pooled_recall_at_percent": 0.1554054054054054,
+          "mean_lift_vs_random": 1.554054054054054,
+          "mean_jaccard": 0.0869037674116747,
+          "mean_overlap_count": 3.108108108108108,
+          "hit_any_rate": 0.9594594594594594,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.5699247522702239,
+            "mean": 0.16643438642328529,
+            "median": 0.14319493144091394,
+            "std": 0.12386778835661388,
+            "p10": 0.02979493810864529,
+            "p90": 0.3529096884164405
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.4,
+            "mean": 0.1554054054054054,
+            "median": 0.15,
+            "std": 0.08988264404495075,
+            "p10": 0.05,
+            "p90": 0.25
+          }
+        },
+        "text_to_image_attention_cosine_distance_scores": {
+          "label": "Text->Image Attn Cos",
+          "mean_recall_at_percent": 0.09594594594594595,
+          "median_recall_at_percent": 0.1,
+          "std_recall_at_percent": 0.062469861250412005,
+          "pooled_recall_at_percent": 0.09594594594594595,
+          "mean_lift_vs_random": 0.9594594594594594,
+          "mean_jaccard": 0.05153558354127344,
+          "mean_overlap_count": 1.9189189189189189,
+          "hit_any_rate": 0.8918918918918919,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.3857567060726855,
+            "mean": 0.08431993610314457,
+            "median": 0.062162898948644026,
+            "std": 0.07232563373287063,
+            "p10": 0.006200082117685386,
+            "p90": 0.1695762545511407
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.25,
+            "mean": 0.09594594594594594,
+            "median": 0.1,
+            "std": 0.062469861250412005,
+            "p10": 0.015000000000000036,
+            "p90": 0.2
+          }
+        },
+        "projector_output_delta_scores": {
+          "label": "Projector Delta",
+          "mean_recall_at_percent": 0.20540540540540542,
+          "median_recall_at_percent": 0.2,
+          "std_recall_at_percent": 0.12040684623155878,
+          "pooled_recall_at_percent": 0.20540540540540542,
+          "mean_lift_vs_random": 2.054054054054054,
+          "mean_jaccard": 0.11964070233455168,
+          "mean_overlap_count": 4.108108108108108,
+          "hit_any_rate": 0.9594594594594594,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.7516264394778347,
+            "mean": 0.27226852467980367,
+            "median": 0.25183590855586224,
+            "std": 0.18091128020698038,
+            "p10": 0.06313328080096411,
+            "p90": 0.5137392673850587
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.5,
+            "mean": 0.20540540540540542,
+            "median": 0.2,
+            "std": 0.12040684623155878,
+            "p10": 0.05,
+            "p90": 0.35
+          }
+        },
+        "topk_image_attention_overlap_k10_scores": {
+          "label": "Top-k Overlap K10",
+          "mean_recall_at_percent": 0.1506756756756757,
+          "median_recall_at_percent": 0.15,
+          "std_recall_at_percent": 0.08240196601369315,
+          "pooled_recall_at_percent": 0.15067567567567566,
+          "mean_lift_vs_random": 1.5067567567567568,
+          "mean_jaccard": 0.0836802281974234,
+          "mean_overlap_count": 3.0135135135135136,
+          "hit_any_rate": 0.9459459459459459,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.6090839143949938,
+            "mean": 0.15995113978210868,
+            "median": 0.1383655870533832,
+            "std": 0.12238974737011854,
+            "p10": 0.03643868513005701,
+            "p90": 0.2998577269592311
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.4,
+            "mean": 0.1506756756756757,
+            "median": 0.15,
+            "std": 0.08240196601369315,
+            "p10": 0.05,
+            "p90": 0.25
+          }
+        },
+        "cross_modal_gated_scores": {
+          "label": "Cross-modal Gate",
+          "mean_recall_at_percent": 0.17027027027027028,
+          "median_recall_at_percent": 0.15,
+          "std_recall_at_percent": 0.09296865169090197,
+          "pooled_recall_at_percent": 0.17027027027027028,
+          "mean_lift_vs_random": 1.7027027027027026,
+          "mean_jaccard": 0.09595740767919637,
+          "mean_overlap_count": 3.4054054054054053,
+          "hit_any_rate": 0.972972972972973,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.5698869349094069,
+            "mean": 0.17935515299821117,
+            "median": 0.14871676502579909,
+            "std": 0.13099630159183695,
+            "p10": 0.03513603802037399,
+            "p90": 0.3714010995954288
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.45,
+            "mean": 0.17027027027027025,
+            "median": 0.15,
+            "std": 0.09296865169090197,
+            "p10": 0.05,
+            "p90": 0.3
+          }
+        },
+        "early_mid_decoder_block_hidden_delta_scores": {
+          "label": "Mid Block L2",
+          "mean_recall_at_percent": 0.19932432432432431,
+          "median_recall_at_percent": 0.2,
+          "std_recall_at_percent": 0.09982865159160227,
+          "pooled_recall_at_percent": 0.19932432432432431,
+          "mean_lift_vs_random": 1.993243243243243,
+          "mean_jaccard": 0.1142230163765681,
+          "mean_overlap_count": 3.9864864864864864,
+          "hit_any_rate": 0.972972972972973,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.46440362114190437,
+            "mean": 0.2303054631647478,
+            "median": 0.2507323657805006,
+            "std": 0.13031651920689777,
+            "p10": 0.06564654518258017,
+            "p90": 0.4166313501894724
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.5,
+            "mean": 0.19932432432432434,
+            "median": 0.2,
+            "std": 0.09982865159160227,
+            "p10": 0.06500000000000004,
+            "p90": 0.3
+          }
+        },
+        "last_text_token_hidden_delta_scores": {
+          "label": "Last Text Delta",
+          "mean_recall_at_percent": 0.1331081081081081,
+          "median_recall_at_percent": 0.1,
+          "std_recall_at_percent": 0.09200360856136369,
+          "pooled_recall_at_percent": 0.1331081081081081,
+          "mean_lift_vs_random": 1.331081081081081,
+          "mean_jaccard": 0.0740167536993825,
+          "mean_overlap_count": 2.6621621621621623,
+          "hit_any_rate": 0.9054054054054054,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.46418380660963776,
+            "mean": 0.141927318466528,
+            "median": 0.10958191072830695,
+            "std": 0.12158519852524163,
+            "p10": 0.014613383905884951,
+            "p90": 0.32100915919582385
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.45,
+            "mean": 0.13310810810810814,
+            "median": 0.1,
+            "std": 0.09200360856136369,
+            "p10": 0.05,
+            "p90": 0.25
+          }
+        },
+        "high_attention_weighted_image_token_delta_scores": {
+          "label": "Attn-weighted Img Delta",
+          "mean_recall_at_percent": 0.22567567567567567,
+          "median_recall_at_percent": 0.25,
+          "std_recall_at_percent": 0.11337668716323927,
+          "pooled_recall_at_percent": 0.22567567567567567,
+          "mean_lift_vs_random": 2.2567567567567566,
+          "mean_jaccard": 0.1318136302990452,
+          "mean_overlap_count": 4.513513513513513,
+          "hit_any_rate": 0.972972972972973,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.7434490881621597,
+            "mean": 0.2792734587322307,
+            "median": 0.30680781706195415,
+            "std": 0.16751204613486467,
+            "p10": 0.04550778271083238,
+            "p90": 0.4754154515457744
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.45,
+            "mean": 0.22567567567567567,
+            "median": 0.25,
+            "std": 0.11337668716323927,
+            "p10": 0.06500000000000004,
+            "p90": 0.35
+          }
+        },
+        "hidden_state_mean_layer_l2_scores": {
+          "label": "Mean L2",
+          "mean_recall_at_percent": 0.2141891891891892,
+          "median_recall_at_percent": 0.2,
+          "std_recall_at_percent": 0.10151563262330662,
+          "pooled_recall_at_percent": 0.2141891891891892,
+          "mean_lift_vs_random": 2.1418918918918917,
+          "mean_jaccard": 0.12368147616814099,
+          "mean_overlap_count": 4.283783783783784,
+          "hit_any_rate": 0.972972972972973,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.600651779862458,
+            "mean": 0.2540805215670197,
+            "median": 0.2461925498824907,
+            "std": 0.14383655367658058,
+            "p10": 0.06351072109326235,
+            "p90": 0.46535940457450975
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.55,
+            "mean": 0.21418918918918922,
+            "median": 0.2,
+            "std": 0.10151563262330662,
+            "p10": 0.1,
+            "p90": 0.33500000000000013
+          }
+        },
+        "attention_cosine_distance_scores": {
+          "label": "Attn Cos",
+          "mean_recall_at_percent": 0.14391891891891892,
+          "median_recall_at_percent": 0.125,
+          "std_recall_at_percent": 0.11269208907182351,
+          "pooled_recall_at_percent": 0.14391891891891892,
+          "mean_lift_vs_random": 1.439189189189189,
+          "mean_jaccard": 0.08178396564406913,
+          "mean_overlap_count": 2.8783783783783785,
+          "hit_any_rate": 0.8513513513513513,
+          "oracle_mass_recall_stats": {
+            "min": 0.0,
+            "max": 0.5908152931408565,
+            "mean": 0.18448939045889784,
+            "median": 0.11976484507647271,
+            "std": 0.17153504868981378,
+            "p10": 0.0,
+            "p90": 0.45435880930993944
+          },
+          "recall_stats": {
+            "min": 0.0,
+            "max": 0.5,
+            "mean": 0.14391891891891892,
+            "median": 0.125,
+            "std": 0.11269208907182351,
+            "p10": 0.0,
+            "p90": 0.3
+          }
+        }
+      }
+    }
+  },
+  "input_jsonl": "kv_reuse_nextqa/results/cheap_signals.jsonl",
+  "output_png": "/home/nxc/sooyoung7896/kvcache_exp/kv_reuse_nextqa/results/cheap_signal_topk_retrieval.png",
+  "output_summary_json": "/home/nxc/sooyoung7896/kvcache_exp/kv_reuse_nextqa/results/cheap_signal_topk_retrieval_summary.json",
+  "sample_id": null,
+  "signal_labels": {
+    "text_token_decoder_hidden_delta_scores": "Text Hidden Delta",
+    "text_to_image_attention_cosine_distance_scores": "Text->Image Attn Cos",
+    "projector_output_delta_scores": "Projector Delta",
+    "topk_image_attention_overlap_k10_scores": "Top-k Overlap K10",
+    "cross_modal_gated_scores": "Cross-modal Gate",
+    "early_mid_decoder_block_hidden_delta_scores": "Mid Block L2",
+    "last_text_token_hidden_delta_scores": "Last Text Delta",
+    "high_attention_weighted_image_token_delta_scores": "Attn-weighted Img Delta",
+    "hidden_state_mean_layer_l2_scores": "Mean L2",
+    "attention_cosine_distance_scores": "Attn Cos"
+  }
+}
