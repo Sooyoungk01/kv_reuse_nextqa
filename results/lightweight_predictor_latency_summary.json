@@ -1,0 +1,63 @@
+{
+  "model_name": "llava-hf/llava-onevision-qwen2-7b-ov-hf",
+  "dataset_name": "lmms-lab/NExTQA",
+  "dataset_config_name": "MC",
+  "dataset_split": "test",
+  "num_frames": 10,
+  "max_samples": 10,
+  "benchmark_runs": 3,
+  "warmup_runs": 1,
+  "predictor": {
+    "type": "streaming_tokenwise_transformer_encoder_dummy_inputs",
+    "input_features": [
+      "dummy_last_layer_attention_map",
+      "dummy_embedding_drift"
+    ],
+    "num_layers": 4,
+    "hidden_dim": 128,
+    "num_heads": 4,
+    "ffn_dim": 512,
+    "max_seq_len": 512,
+    "dropout": 0.0,
+    "checkpoint": null
+  },
+  "results": {
+    "num_records": 10,
+    "baseline_amortized_frame_total_ms": {
+      "avg": 282.62457434087986,
+      "p50": 283.2220859825611,
+      "p95": 288.82977484414977,
+      "min": 268.49558614194393,
+      "max": 288.82977484414977
+    },
+    "with_predictor_amortized_frame_total_ms": {
+      "avg": 281.95026847223437,
+      "p50": 283.1500271335244,
+      "p95": 289.34527685244876,
+      "min": 268.5849114631613,
+      "max": 289.34527685244876
+    },
+    "predictor_frame_total_ms": {
+      "avg": 1.1853253655135632,
+      "p50": 1.184389553964138,
+      "p95": 1.2009068702658017,
+      "min": 1.173979106048743,
+      "max": 1.2009068702658017
+    },
+    "predictor_forward_frame_ms": {
+      "avg": 1.1464417167007923,
+      "p50": 1.1455962434411049,
+      "p95": 1.1623491222659748,
+      "min": 1.1353253076473873,
+      "max": 1.1623491222659748
+    },
+    "predictor_overhead_frame_ms": {
+      "avg": -0.6743058686455089,
+      "p50": -0.1406429335474968,
+      "p95": 1.4489567528168361,
+      "min": -3.777172788977623,
+      "max": 1.4489567528168361
+    }
+  },
+  "output_jsonl": "/home/nxc/sooyoung7896/kvcache_exp/kv_reuse_nextqa/results/lightweight_predictor_latency.jsonl"
+}

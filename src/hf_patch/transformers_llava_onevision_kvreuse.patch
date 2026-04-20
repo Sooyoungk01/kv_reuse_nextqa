@@ -1,0 +1,52 @@
+diff --git a/src/transformers/models/llava_onevision/modeling_llava_onevision.py b/src/transformers/models/llava_onevision/modeling_llava_onevision.py
+index 0000000..1111111 100644
+--- a/src/transformers/models/llava_onevision/modeling_llava_onevision.py
++++ b/src/transformers/models/llava_onevision/modeling_llava_onevision.py
+@@
+ class LlavaOnevisionForConditionalGeneration(LlavaOnevisionPreTrainedModel, GenerationMixin):
+@@
+     def get_video_features(
+         self,
+         pixel_values: torch.FloatTensor,
+         vision_feature_layer: int | list[int] | list[int] | None = None,
+         vision_feature_select_strategy: str | None = None,
+         **kwargs: Unpack[TransformersKwargs],
+     ) -> tuple | BaseModelOutputWithPooling:
+@@
+         return self.model.get_video_features(
+             pixel_values=pixel_values,
+             vision_feature_layer=vision_feature_layer,
+             vision_feature_select_strategy=vision_feature_select_strategy,
+             **kwargs,
+         )
++
++    def prefill_baseline_from_embeds(
++        self,
++        inputs_embeds: torch.FloatTensor,
++    ):
++        outputs = self.model.language_model(
++            inputs_embeds=inputs_embeds,
++            use_cache=True,
++            return_dict=True,
++        )
++        return outputs.past_key_values
++
++    def prefill_with_video_kv_reuse(
++        self,
++        prepared_prompt,
++        raw_video_frames,
++        pixel_threshold: float = 0.08,
++    ):
++        # Research hook.
++        # This method is intentionally thin; the heavier implementation can live outside
++        # transformers, while the class gets a stable entrypoint for KV reuse experiments.
++        from temporal_kv_reuse.prefill import kv_reuse_prefill
++
++        return kv_reuse_prefill(
++            model=self,
++            prepared_prompt=prepared_prompt,
++            raw_video_frames=raw_video_frames,
++            pixel_threshold=pixel_threshold,
++        )
+ 
+ __all__ = ["LlavaOnevisionModel", "LlavaOnevisionForConditionalGeneration", "LlavaOnevisionPreTrainedModel"]

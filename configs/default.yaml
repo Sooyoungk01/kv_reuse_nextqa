@@ -1,0 +1,27 @@
+model_name: llava-hf/llava-onevision-qwen2-7b-ov-hf
+dataset_name: lmms-lab/NExTQA
+dataset_config_name: MC
+dataset_split: test
+video_root: /home/nxc/sooyoung7896/kvcache_exp/data/NExTVideo
+output_dir: /home/nxc/sooyoung7896/kvcache_exp/kv_reuse_nextqa/results
+max_samples: 100
+num_frames: 32
+max_new_tokens: 32
+device: cuda:1
+dtype: bfloat16
+attn_implementation: sdpa
+teacher_reference: selective_all_recompute
+threshold: 0.08
+reuse_mode: pixel_change
+profile_timing: true
+question_template: |-
+  Answer the following multiple-choice question about the video.
+  Choose exactly one option from A, B, C, D, E.
+  Reply with only the option letter.
+
+generation:
+  do_sample: false
+  temperature: 0.0
+
+scoring:
+  normalize_by_length: true
